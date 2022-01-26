@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="{{ url_for('static', filename='/static/CSS/style.css')}}" />
+<title>Identified</title>
+
+<script  type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="text-align: center; color:hsl(250, 69%, 61%); margin-top: 50PX;" >WELCOME TO RUAS BANK</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col conf" style="margin-top: 20px;box-shadow: 9px 9px 27px 2px hsl(250, 66%, 55%); border-radius: 70px; margin-right: 50px; text-align: center;">
+                <h4 style="margin-top: 10px;">Confirming your Identity</h4>
+                <h6 id="det"> </h6>
+                <h6 id="num"> </h6>
+            </div>
+            
+            <div class="col conf" style="margin-top: 20px;box-shadow: 9px 9px 27px 2px hsl(250, 66%, 55%); border-radius: 70px; margin-right: 50px; text-align: center;">
+                <img src="{{url_for('static',filename = 'img/face.png')}}" alt="face">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function verify(){
+            responsiveVoice.speak("Please speak for your transaction in the next page");
+            responsiveVoice.speak("You can withdraw money");
+            responsiveVoice.speak("or see transaction history");
+
+            fetch('/templates/file.txt')
+            .then(response => response.text())
+            .then(data => {
+                console.log(data)
+                if( data == "Yogesh"){
+                    const det1 = "Welcome Yogesh"
+                    const num = "Account number = 18ETEC004113"
+                    document.getElementById("det").innerHTML = det1;
+                    document.getElementById("num").innerHTML = num;               
+                }
+                else if (data == "Aman raj gupta"){
+                    const det1 = "Welcome Aman raj gupta"
+                    const num = "Account number = 18ETEC004118"
+                    document.getElementById("det").innerHTML = det1;
+                    document.getElementById("num").innerHTML = num;
+                }
+                else if (data == "Pragya"){
+                    const det1 = "Welcome Pragya"
+                    const num = "Account number = 18ETEC004118"
+                    document.getElementById("det").innerHTML = det1;
+                    document.getElementById("num").innerHTML = num;
+                }
+                else if (data == "Sudhanshu"){
+                    const det1 = "Welcome Sudhanshu"
+                    const num = "Account number = 18ETEC004103"
+                    document.getElementById("det").innerHTML = det1;
+                    document.getElementById("num").innerHTML = num;
+                }
+                else if (data == "Shivkumar"){
+                    const det1 = "Welcome Shivkumar"
+                    const num = "Account number = 18ETME0040526"
+                    document.getElementById("det").innerHTML = det1;
+                    document.getElementById("num").innerHTML = num;
+                }
+                else{
+                    const det1 = "Name - XYZ"
+                    const num = "Account number = 123456789"
+                    document.getElementById("det").innerHTML = det1;
+                    document.getElementById("num").innerHTML = num;
+                }
+                
+            }); 
+        }
+        window.onload = verify;
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
+<script>
+     setTimeout(function(){
+        window.location.href = "{{url_for('choose')}}";
+     }, 10000);
+</script>
+
+</body>
+</html>

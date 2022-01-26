@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script  type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <title>RUAS</title>
+    <script type="text/javascript">
+        function codeAddress() {
+            responsiveVoice.speak("your transaction history is here");
+        }
+        window.onload = codeAddress;
+    </script>
+
+    
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="text-align: center; color:hsl(250, 69%, 61%); margin-top: 50PX;" >RUAS BANK</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4 style="text-align: center; color:hsl(250, 69%, 61%); margin-top: 10PX;" >Your transaction history</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Detail</th>
+                            <th scope="col">Credit</th>
+                            <th scope="col">Debit</th>
+                            <th scope="col">Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>UPI</td>
+                            <td>100</td>
+                            <td>0</td>
+                            <td>5000</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Online</td>
+                            <td>500</td>
+                            <td>0</td>
+                            <td>5500</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>ATM - withdraw</td>
+                            <td>0</td>
+                            <td>1000</td>
+                            <td>4500</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    setTimeout(function(){
+        window.location.href = "{{url_for('trans2')}}";
+     }, 10000);
+     </script>
+
+  </body>
+</html>

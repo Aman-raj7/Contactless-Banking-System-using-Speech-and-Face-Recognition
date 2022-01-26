@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="/Tran/style_tran.css">
+<title>Withdraw</title>
+<script  type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="text-align: center; color:hsl(250, 69%, 61%); margin-top: 50PX;" >RUAS BANK</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col conf" style="margin-top: 20px;box-shadow: 9px 9px 27px 2px hsl(250, 66%, 55%); border-radius: 70px; margin-right: 50px; text-align: center;">
+                <h4 style="text-align: center; color:hsl(250, 69%, 61%); margin-top: 10px;">Withdraw</h4>
+                <h3 class="content">
+                    Note: You can Withdraw form 1000 - 10,000 Rs only
+                </h3>
+            </div>
+
+            <div class="col conf" style="margin-top: 20px;box-shadow: 9px 9px 27px 2px hsl(250, 66%, 55%); border-radius: 70px; margin-right: 50px; text-align: center;">
+                <img src="{{url_for('static',filename = 'img/draw.png')}}" height="300px" width="300px" alt="face">
+            </div>
+        </div>
+    </div>
+    <script>
+        // The JavaScript Part Starts
+        const content = document.querySelector('.content');
+        const withdraw = [
+            ' '
+     ];
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition =  new SpeechRecognition();
+        recognition.continuous = true;
+
+        recognition.onstart = function(){
+            console.log('How Can I Help You ?')
+        }
+        recognition.onresult = function (event) {
+            const current = event.resultIndex;
+
+            const transcript = event.results[current][0].transcript;
+            content.textContent = transcript;
+            readOutLoud(transcript);
+
+        };
+
+        function load(){
+            recognition.start();
+            responsiveVoice.speak("Please tell the amount in thousand");
+         }
+         window.onload = load;
+
+
+        function readOutLoud(message){
+            const speech = new SpeechSynthesisUtterance();
+
+            speech.text = 'I am not able to understand ,sir';
+
+
+            if(message.includes('10000')){
+                const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                speech.text = finalText; 
+                window.open("{{url_for('withdraw2')}}",'_self')
+                }
+                else if(message.includes('5000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('6000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('7000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('8000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('9000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('4000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('3000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('2000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('1000')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('Ten thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('one thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('two thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('three thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('four thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('five thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('six thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('seven thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('eight thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                else if(message.includes('nine thousand')){
+                    const finalText = 
+                    withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw2')}}",'_self')                        
+                }
+                
+            speech.volume = 1;
+            speech.rate = 1.1;
+            speech.pitch = 1;
+
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style_tran.css">
+<title>Select</title>
+<script  type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="text-align: center; color:hsl(250, 69%, 61%); margin-top: 15PX;" >CONTINUE BANKING</h1>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5 conf" style="margin-top: 20px;box-shadow: 9px 9px 27px 2px hsl(250, 66%, 55%); border-radius: 70px; margin-right: 20px; text-align: center;" >
+                <h4>WITHDRAW MONEY</h4>
+                <img src="{{url_for('static',filename = 'img/withdraw.jpg')}}" alt="Withdraw money" style="width: 200px; height: 200px;">
+            </div>
+
+            <div class="col-sm-5 conf" style="margin-top: 20px;box-shadow: 9px 9px 27px 2px hsl(250, 66%, 55%); border-radius: 70px; margin-right: 20px; text-align: center;">
+                <h4>TRANSCATION HISTORY</h4>
+                <img src="{{url_for('static',filename = 'img/history.png')}}" alt="Withdraw money" style="width: 150px; height: 150px;">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="content"></h3>
+        <script>
+            // The JavaScript Part Starts
+            const content = document.querySelector('.content');
+            const withdraw = [
+                ''
+         ];
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition =  new SpeechRecognition();
+            recognition.continuous = true;
+    
+            recognition.onstart = function(){
+                console.log('How Can I Help You ?')
+            }
+            recognition.onresult = function (event) {
+                const current = event.resultIndex;
+    
+                const transcript = event.results[current][0].transcript;
+                content.textContent = transcript;
+                readOutLoud(transcript);
+    
+            };
+    
+            function load(){
+                recognition.start();
+                responsiveVoice.speak("You can speak now");
+             }
+             window.onload = load;
+    
+    
+            function readOutLoud(message){
+                const speech = new SpeechSynthesisUtterance();
+    
+                speech.text = 'I am not able to understand ,sir';
+    
+    
+                if(message.includes('withdrawal')){
+                    const finalText = 
+                        withdraw[Math.floor(Math.random()*withdraw.length)];
+                    speech.text = finalText; 
+                    window.open("{{url_for('withdraw')}}",'_self')
+                    }
+                    else if(message.includes('withdraw')){
+                        const finalText = 
+                        withdraw[Math.floor(Math.random()*withdraw.length)];
+                        speech.text = finalText; 
+                        window.open("{{url_for('withdraw')}}",'_self')                        
+                    }
+                    else if(message.includes('witdraw')){
+                        const finalText = 
+                        withdraw[Math.floor(Math.random()*withdraw.length)];
+                        speech.text = finalText; 
+                        window.open("{{url_for('withdraw')}}",'_self')                        
+                    }
+                    else if(message.includes('petra')){
+                        const finalText = 
+                        withdraw[Math.floor(Math.random()*withdraw.length)];
+                        speech.text = finalText; 
+                        window.open("{{url_for('withdraw')}}",'_self')                        
+                    }
+                    else if(message.includes('transaction')){
+                        const finalText = 
+                        withdraw[Math.floor(Math.random()*withdraw.length)];
+                        speech.text = finalText; 
+                        window.open("{{url_for('trans')}}",'_self')                        
+                    }
+                    else if(message.includes('transisition')){
+                        const finalText = 
+                        withdraw[Math.floor(Math.random()*withdraw.length)];
+                        speech.text = finalText; 
+                        window.open("{{url_for('trans')}}",'_self')                        
+                    }
+                speech.volume = 1;
+                speech.rate = 1.1;
+                speech.pitch = 1;
+    
+                window.speechSynthesis.speak(speech);
+            }
+        </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
