@@ -1,5 +1,7 @@
 # Minor-Project
 Contactless Banking System using Speech and  Face Recognition
+
+
 Smart banking system allows contactless transaction. 
 In the ongoing covid-19 pandemic everyone has the fear of contacting the panel which might be used by the infected person.
 It also allows card less transaction.
