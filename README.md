@@ -62,4 +62,4 @@ IMPLEMENTATION OF FRONTEND DEVELOPMENT IN CONTACTLESS BANKING SYSTEM:-
 • The CSS make the webpage more interactive and appealing.
 • Bootstrap Tools: our model can be responsive as per variable kiosk screen sizes.
 
-URL of the code:-
+URL of the code:-https://github.com/Aman-raj7/Minor-Project.git
