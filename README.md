@@ -31,6 +31,10 @@ tqdm==4.51.0
 urllib3==1.25.11
 wincertstore==0.2
 
+Process
+![image](https://user-images.githubusercontent.com/47324818/151411313-4e552725-cc28-4a0f-9de5-326306b1c6db.png)
+
+
 TOOLS USED TO DESIGN AND DEVELOP FACE RECOGNITION:
 • Flask: Flask is a web framework, it's a Python module that
 lets us develop web applications.
@@ -39,15 +43,25 @@ for computer vision applications
 • Face_recognition: The library is used to recognize and manipulate faces
 from python or from the command line.
 • Numpy: it is the fundamental package for scientific computing in Python.
+![image](https://user-images.githubusercontent.com/47324818/151411470-ebc19cb7-1793-4db3-8135-14acaef08a8e.png)
+
 
 TOOLS USED TO DESIGN AND DEVELOP SPEECH SYNTHESIS:
 • ResponsiveVoice Text To Speech API : Use for speech recognition (i.e., speech to text)
+![image](https://user-images.githubusercontent.com/47324818/151411548-8c43a814-7d40-4be2-9ec4-b07484c19298.png)
+![image](https://user-images.githubusercontent.com/47324818/151411603-badff939-bc03-4f20-a7e3-69d502202b07.png)
+![image](https://user-images.githubusercontent.com/47324818/151411687-179d357f-f4e1-4a98-a9cf-a38733b03f54.png)
+![image](https://user-images.githubusercontent.com/47324818/151411731-e8d71fa3-bff5-487c-b7d5-bef6f4da0d25.png)
+![image](https://user-images.githubusercontent.com/47324818/151411805-f37d9093-9058-4417-ac07-f6c0286420b6.png)
+
 
 TOOLS USED TO DESIGN AND DEVELOP FRONTEND WEB:
 • HTML: Hypertext Markup Language is the code that is used to structure a web page and its content.
 • CSS: color formatting and alignment
 • Java script: for handling speech recognition & synthesis
 • Bootstrap: It is used for responsiveness (optimising with screen size)
+![image](https://user-images.githubusercontent.com/47324818/151411863-1b159454-2fd7-42ec-a90c-f53629dea727.png)
+
 
 IMPLEMENTATION OF FACE RECOGNITION IN CONTACTLESS BANKING SYSTEM:-
 • Recognise the face of account holder and display name.
@@ -62,4 +76,11 @@ IMPLEMENTATION OF FRONTEND DEVELOPMENT IN CONTACTLESS BANKING SYSTEM:-
 • The CSS make the webpage more interactive and appealing.
 • Bootstrap Tools: our model can be responsive as per variable kiosk screen sizes.
 
+URL of the code:-https://github.com/Aman-raj7/Minor-Project.git
+Demo:-https://www.youtube.com/watch?v=zrRhFCLWGUY
+
+opencv-python==4.4.0.46
+ResponsiveVoice Text To Speech API : Use for speech recognition (i.e., speech to text)
+Face api
+these three microsoft azure tool is used for deployment all codes are saved in tempelate file the main code is app.py
 URL of the code:-https://github.com/Aman-raj7/Minor-Project.git
