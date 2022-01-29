@@ -43,7 +43,6 @@ for computer vision applications
 • Face_recognition: The library is used to recognize and manipulate faces
 from python or from the command line.
 • Numpy: it is the fundamental package for scientific computing in Python.
-![image](https://user-images.githubusercontent.com/47324818/151412967-daffb7a7-cc59-429c-b361-1b2b4e4eb894.png)
 
 ![image](https://user-images.githubusercontent.com/47324818/151411470-ebc19cb7-1793-4db3-8135-14acaef08a8e.png)
 
